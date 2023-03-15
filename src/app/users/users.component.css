@@ -1,0 +1,64 @@
+
+.parent-container {
+    padding: 10vh 10vw;
+}
+
+.heading-user {
+    font-size: 32px;
+    font-weight: 500;
+}
+.user-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin-top: 50px;
+}
+.user-detail {
+    width: 22vw;
+    padding: 10px;
+    margin: 10px;
+    cursor:default;
+    border: 1px solid transparent;
+    display:flex;
+}
+
+.user-detail:hover {
+    width: 22vw;
+    padding: 10px;
+    margin: 10px;
+    cursor:default;
+    border: solid 1px #87a0ce;
+    border-radius: 10px;
+}
+.user-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+.user-location {
+    margin-top:8px;
+
+}
+
+.user-interest {
+    width: fit-content;
+    padding: 4px 10px;
+    border: 1px solid #E2E9F9;
+    border-radius: 8px;
+    color: #87a0ce;
+    margin: 6px;
+    height: 20px;
+}
+.interest-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80px;
+}
+.user-image {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}

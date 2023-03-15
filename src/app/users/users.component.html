@@ -1,0 +1,38 @@
+<div class="parent-container">
+    <div class="heading-user">
+        <span>Users</span>
+    </div>
+    <div>
+        <!-- <div> -->
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <!-- </div> -->
+        <div class="user-wrapper">
+            <div *ngFor="let user of usersList" class="user-detail">
+                <div style="width: 30%;">
+                    <div class="user-image" style="background-image: url(/assets/{{user.asset}})">
+                    </div>
+                </div>
+                <div style="width: 70%;">
+                    <span class="user-name">{{user.userName}}</span>
+                    <div class="user-location">{{user.location}}, {{user.city}}</div>
+                    <div class="interest-wrapper">
+                        <div *ngFor="let interest of user.interest" class="user-interest">
+                            <span>{{interest}}</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+
+    </div>
+</div>
