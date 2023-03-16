@@ -5,15 +5,15 @@
     <div>
         <!-- <div> -->
         <p>
-            <mat-form-field appearance="outline">
-                <mat-label>Outline form field</mat-label>
-                <input matInput placeholder="Placeholder">
-                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-form-field appearance="outline" class="search-user">
+                <mat-label>Search User</mat-label>
+                <mat-icon matPrefix>search</mat-icon>
+                <input matInput placeholder="Search User" [(ngModel)]="searchValue" (keyup)="searchUser()">
             </mat-form-field>
         </p>
         <!-- </div> -->
         <div class="user-wrapper">
-            <div *ngFor="let user of usersList" class="user-detail">
+            <div *ngFor="let user of searchedUserList" class="user-detail">
                 <div style="width: 30%;">
                     <div class="user-image" style="background-image: url(/assets/{{user.asset}})">
                     </div>

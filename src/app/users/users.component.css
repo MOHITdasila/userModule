@@ -29,6 +29,7 @@
     cursor:default;
     border: solid 1px #87a0ce;
     border-radius: 10px;
+    scale: 1.05;
 }
 .user-name {
     font-size: 20px;
@@ -61,4 +62,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.search-user {
+    width: 400px;
 }

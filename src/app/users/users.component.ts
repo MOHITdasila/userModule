@@ -1,15 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
+
+interface user {
+  userName: String,
+  location: String,
+  city: String,
+  interest: String[],
+  id: Number,
+  asset: String
+}
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
+
 export class UsersComponent implements OnInit {
 
 
   value = 'Clear me';
-  usersList = [{
+  usersList: user[] = [{
     userName: 'Lelah Nicholes',
     location: 'Troy',
     city: 'MI',
@@ -56,10 +66,19 @@ export class UsersComponent implements OnInit {
     interest: ['vintage', 'electric'],
     id: 6,
     asset: 'pic4.jpg'
-  }]
+    }];
+  searchValue = '';
+  searchedUserList: user[] = [];
   constructor() { }
 
   ngOnInit(): void {
+    this.searchedUserList = this.usersList;
+  }
+
+
+  searchUser() {
+    console.log('event: ', this.searchValue);
+    this.searchedUserList = this.usersList.filter(user => user.userName.toLowerCase().startsWith(this.searchValue.toLowerCase()));
   }
 
 }
